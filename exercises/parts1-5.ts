@@ -14,25 +14,39 @@ let milesPerKilometer: number = .621;
 let milesToMars: number = kilometersToMars*milesPerKilometer;
 let hoursToMars: number = milesToMars / speedMPH;
 let daysToMars: number = hoursToMars / 24;
-console.log(`${spacecraftName} would take ${daysToMars} days to get to Mars.`);
+
 
 
 // Code an output statement here (use a template literal):
-
+//console.log(`${spacecraftName} would take ${daysToMars} days to get to Mars.`);
 
 
 // Part 3: Create a Function ("getDaysToLocation")
+function getDaysToLocation(kilometersAway:number):number{
+    let milesToLocation: number = kilometersAway*milesPerKilometer;
+    let hoursToLocation: number = milesToLocation / speedMPH;
+    return hoursToLocation / 24;
 
+}
 
 
 // Move your output statement from part 2 here. Update the template literal to call
 // the function and print the outputs for a Mars trip and a moon trip.
-
+console.log(`${spacecraftName} would take ${getDaysToLocation(kilometersToMars)} days to get to Mars.
+${spacecraftName} would take ${getDaysToLocation(kilometersToTheMoon)} days to get to the Moon.`);
 
 
 
 // Part 4: Create a Spacecraft Class
-
+//class Spacecraft{
+   // milesPerKilometer: number = .621;
+   // spacecraftName: string;
+   // speedMph: number;
+   // constructor(givenName: string, speedMPH: number){
+    //    this.spacecraftName = givenName;
+   //     this.speedMph = speedMPH;
+  //  }
+//}
 
 
 
